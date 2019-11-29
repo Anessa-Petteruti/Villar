@@ -1,6 +1,28 @@
+@font-face{
+  font-family: "Circular-Book";
+  src: url("./CircularStd-Book.otf");
+}
+
+@font-face{
+  font-family: "Circular-Black";
+  src: url("./CircularStd-Black.ttf");
+}
+
 .App {
   text-align: center;
   background: #ffffff;
+}
+
+.leftDiv {
+  background-color: #148afc;
+/*  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+*/  min-width: 350px;
+  height: 1000px;
+}
+
+.rightDiv {
+  min-width: 1100px;
+  height: 1000px;
 }
 
 .header {
@@ -17,13 +39,15 @@
 }
 
 .logoText {
-  color: #1d266e;
-  font-family: "Nunito";
-  font-size: 200px;
+  color: #148afc;
+  font-family: "Circular-Black";
+  font-size: 150px;
 }
 
 .previewImage {
-  height: 100px;
+  height: 210px;
+  width: 300px;
+  align-self: center;
 }
 
 .items {
@@ -31,57 +55,149 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .itemDiv {
+  background-color: #ededed;
   margin: 10px;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: left;
+  align-items: center;
   color: white;
+  width: 300px;
+/*  padding: 10px 10px 20px 10px;
+*/  box-shadow: 5px 5px 5px #aaaaaa;
+  border-radius: 1px 1px;
+}
+
+.divAddress {
+  display: flex;
+  flex-direction: row;
+}
+
+.divIcon {
+  width: auto;
+  height: 30px;
+}
+
+.addressTextDiv {
+  display: flex;
+  flex-direction: column;
 }
 
 .address1 {
-  font-family: "Nunito";
-  font-size: 20px;
+  font-family: "Circular-Book";
+  font-size: 22px;
+  color: #4d4d4d;
+  align-self: left;
+  margin-top: 10px;
 }
 
 .address2 {
-  font-family: "Nunito";
-  font-size: 10px;
+  font-family: "Circular-Book";
+  font-size: 17px;
+  color: #4d4d4d;
 }
 
 .priceDisplay {
-  font-family: "Nunito";
-  font-size: 10px;
+  font-family: "Circular-Book";
+  font-size: 35px;
+  color: #4d4d4d;
+  margin-top: 10px;
 }
 
 .filterType {
-  font-family: "Nunito";
-  font-size: 5px;
+  font-family: "Circular-Book";
+  font-size: 13px;
+  background-color: #148afc;
+  border-radius: 12px 12px;
+  padding-left: 9px;
+  padding-right: 9px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 3px;
+
+}
+
+.divDesc {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
 }
 
 .description {
-  font-family: "Nunito";
-  font-size: 10px;
+  font-family: "Circular-Book";
+  font-size: 13px;
+  color: #4d4d4d;
+  margin-left: 10px;
+}
+
+.tagsText {
+  font-family: "Circular-Book";
+  font-size: 14px;
+  color: #4d4d4d;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+.allTags {
+  display: flex;
+  flex-direction: row;
 }
 
 .allFilterOptions {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.filterAndSortByText {
+  font-family: "Circular-Book";
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.filterIcon {
+  width: 50px;
+  height: auto;
+}
+
+.filterTitle {
+  margin-bottom: 20px;
+}
+
 .locationFilters {
-  color: #1d266e;
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-family: "Circular-Book";
+  font-size: 25px;
+}
+
+.propertyTypeFilters {
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-family: "Circular-Book";
+  font-size: 25px;
+}
+
+.listingFilters {
+  color: #ffffff;
+  margin-bottom: 40px;
+  font-family: "Circular-Book";
+  font-size: 25px;
 }
 
 /* The container */
 .container {
+  color: #ffffff;
   display: block;
   position: relative;
   padding-left: 35px;
@@ -92,6 +208,8 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: "Circular-Book";
+  font-size: 20px;
 }
 
 /* Hide the browser's default radio button */
@@ -110,12 +228,12 @@
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
-  background-color: green;
+  background-color: #ffffff;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #000000;
+  background-color: #e8e8e8;
 
 }
 
@@ -148,3 +266,49 @@
 
 
 
+body {
+  background-color: #000000;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 500px;
+  margin: 50px auto;
+}
+
+.input-highlight {
+  font-size: 30px;
+  user-select: none;
+  line-height: 70px;
+  border-top: 3px solid white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: 0;
+  color: transparent;
+  font-family: "Circular-Book";
+  overflow: hidden;
+}
+
+input {
+  height: 60px;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+  border-radius: 0;
+  line-height: 70px;
+  background-color: transparent;
+  color: #4d4d4d;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #c1c1c1;
+  font-family: "Circular-Book";
+
+  &:focus {
+    + 70px {
+      border-top: 3px solid #fbc91b;
+    }
+  }
+}

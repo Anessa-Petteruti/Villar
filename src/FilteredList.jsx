@@ -81,86 +81,131 @@ class FilteredList extends Component {
     // }
 
     return(
-      <div>
+      <div className="wholeSite">
 
-        <button onClick={this.changeSortingOn}>SORT BY PRICE</button>
+      <div className="leftDiv">
 
-        <button id="amount" onClick={this.changeFilterAmount} value="All">Reset</button>
+      <div className="allFilterOptions">
 
-        <div className="logoText">villar</div>
+        <div className="filterAndSortByText">Filter by</div>
 
-        <input id="searchbar" onChange={this.searching} value={this.state.search} />
+          <div className="locationFilters">
+          
+          <img className="filterIcon" src={require('./images/location.png')} alt="Location Icon"/>
+          <div className="filterTitle">Location</div>
+          <label className="container">Urban
+            <input name="locationRadioButton" type="radio" id="location" onClick={this.changeFilterLocation} value="urban"/>
+            <span className="checkmark"></span>
+          </label>
 
-        <div className="allFilterOptions">
+          <label className="container">Suburban
+            <input name="locationRadioButton" type="radio" id="location" onClick={this.changeFilterLocation} value="suburban"/>
+            <span className="checkmark"></span>
+          </label>
 
-        <div className="locationFilters">
-        <label className="container">Urban
-          <input name="locationRadioButton" type="radio" id="location" onClick={this.changeFilterLocation} value="urban"/>
-          <span className="checkmark"></span>
-        </label>
+          <label className="container">Rural
+            <input name="locationRadioButton" type="radio" id="location" onClick={this.changeFilterLocation} value="rural"/>
+            <span className="checkmark"></span>
+          </label>
+          </div>
 
-        <label className="container">Suburban
-          <input name="locationRadioButton" type="radio" id="location" onClick={this.changeFilterLocation} value="suburban"/>
-          <span className="checkmark"></span>
-        </label>
+          <div className="propertyTypeFilters">
+          <img className="filterIcon" src={require('./images/home.png')} alt="Home Icon"/>
+          <div className="filterTitle">Property Type</div>
+          <label className="container">Apartment
+            <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="apartment"/>
+            <span className="checkmark"></span>
+          </label>
 
-        <label className="container">Rural
-          <input name="locationRadioButton" type="radio" id="location" onClick={this.changeFilterLocation} value="rural"/>
-          <span className="checkmark"></span>
-        </label>
-        </div>
+          <label className="container">House
+            <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="house"/>
+            <span className="checkmark"></span>
+          </label>
 
-        <div className="propertyTypeFilters">
-        <label className="container">Apartment
-          <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="apartment"/>
-          <span className="checkmark"></span>
-        </label>
+          <label className="container">Townhouse
+            <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="townhouse"/>
+            <span className="checkmark"></span>
+          </label>
 
-        <label className="container">House
-          <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="house"/>
-          <span className="checkmark"></span>
-        </label>
-
-        <label className="container">Townhouse
-          <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="townhouse"/>
-          <span className="checkmark"></span>
-        </label>
-
-        <label className="container">Studio
-          <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="studio"/>
-          <span className="checkmark"></span>
-        </label>
-        </div>
+          <label className="container">Studio
+            <input name="propertyTypeRadioButton" type="radio" id="propertyType" onClick={this.changeFilterPropertyType} value="studio"/>
+            <span className="checkmark"></span>
+          </label>
+          </div>
         
 
-        <div className="listingFilters">
-        <label className="container">Up for Sale
-          <input name="listingRadioButton" type="radio" id="listing" onClick={this.changeFilterListing} value="up for sale"/>
-          <span className="checkmark"></span>
-        </label>
+          <div className="listingFilters">
+          <img className="filterIcon" src={require('./images/listing.png')} alt="Listing Icon"/>
+          <div className="filterTitle">Listing</div>
+          <label className="container">Up for Sale
+            <input name="listingRadioButton" type="radio" id="listing" onClick={this.changeFilterListing} value="up for sale"/>
+            <span className="checkmark"></span>
+          </label>
 
-        <label className="container">Rent
-          <input name="listingRadioButton" type="radio" id="listing" onClick={this.changeFilterListing} value="rent"/>
-          <span className="checkmark"></span>
-        </label>
-        </div>
+          <label className="container">Rent
+            <input name="listingRadioButton" type="radio" id="listing" onClick={this.changeFilterListing} value="rent"/>
+            <span className="checkmark"></span>
+          </label>
+          </div>
 
-        </div>
+          <div className="filterAndSortByText">Sort by</div>
+          <div>
+          <label className="container">
+          <div className="filterTitle">Price</div>
+            <input name="priceRadioButton" type="radio" id="price" onClick={this.changeSortingOn}/>
+            <span className="checkmark"></span>
+          </label>
+          </div>
 
-        <div className="items">
+          </div>
 
-          {estates.map(item => 
-            <div className="itemDiv"key={item.id}>
-            <img className="previewImage" src={item.photo}/>
-            <div className="address1">{item.address1}</div>
-            <div className="address2">{item.address2}</div>
-            <div className="priceDisplay">{item.priceDisplay}</div>
-            <div className="description">{item.description}</div>
-            <div className="filterType">{item.location}</div>
-            <div className="filterType">{item.propertyType}</div>
-            <div className="filterType">{item.listing}</div>
-            </div>
-            )}
+      </div>
+
+        <div className="rightDiv">
+
+          
+
+          <button id="amount" onClick={this.changeFilterAmount} value="All">Reset</button>
+
+          <div className="logoText">villar</div>
+
+          <div className='input-wrapper'>
+          <input id="searchbar" onChange={this.searching} value={this.state.search} />
+          <span className='input-highlight'>
+        </span>
+      </div>
+
+          
+
+          <div className="items">
+
+            {estates.map(item => 
+              <div className="itemDiv" key={item.id}>
+              <img className="previewImage" src={item.photo}/>
+              <div className="priceDisplay">{item.priceDisplay}</div>
+              <div className="divAddress">
+                <img className="divIcon" src={require('./images/locationDivIcon.png')} alt="Location Div Icon"/>
+                <div className="addressTextDiv">
+                  <div className="address1">{item.address1}</div>
+                  <div className="address2">{item.address2}</div>
+                </div>
+              </div>
+              
+              <div className="divDesc">
+                <img className="divIcon" src={require('./images/descriptionDivIcon.png')} alt="Desc Div Icon"/>
+                <div className="description">{item.description}</div>
+              </div>
+
+              <div className="tagsText">Tags</div>
+
+              <div className="allTags">
+                <div className="filterType">{item.location}</div>
+                <div className="filterType">{item.propertyType}</div>
+                <div className="filterType">{item.listing}</div>
+              </div>
+              </div>
+              )}
+          </div>
         </div>
       </div>
     );
