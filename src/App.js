@@ -97,6 +97,21 @@ const estates = [
     dateListed: "July 7, 2019",
     amount: "All"
   },
+  {
+    id: 7,
+    photo: require('./images/30OriginWay.jpg'),
+    price: 3500,
+    priceDisplay: "$3,500/month",
+    address1: "30 Origin Way",
+    address2: "Warwick, RI, 02887",
+    description: "Classic colonial townhouse for a small family.",
+    location: "suburban",
+    propertyType: "townhouse",
+    listing: "rent",
+    style: "colonial",
+    dateListed: "February 8, 2019",
+    amount: "All"
+  },
 ];
 
 class App extends Component {

@@ -8,75 +8,11 @@
   flex-direction: row;
 }
 
-.rightDiv {
-  display: flex;
-  flex-direction: column;
-  height: 1000px;
-}
 
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
-.logo {
-  height: 130px;
-  margin-top: 30px;
-  margin-right: 20px;
-}
 
-.logoText {
-  color: #f07f3e;
-  font-family: "Nunito";
-  font-size: 200px;
-}
 
-.previewImage {
-  height: 100px;
-}
 
-.items {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-width: 500px;
-}
 
-.itemDiv {
-  background-color: #d6d6d6;
-  margin: 10px;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.address1 {
-  font-family: "Nunito";
-  font-size: 20px;
-}
 
-.address2 {
-  font-family: "Nunito";
-  font-size: 10px;
-}
-
-.price {
-  font-family: "Nunito";
-  font-size: 10px;
-}
-
-.description {
-  font-family: "Nunito";
-  font-size: 10px;
-}
-
-.App-link {
-  color: #09d3ac;
-}

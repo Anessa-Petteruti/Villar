@@ -14,10 +14,37 @@
 }
 
 .leftDiv {
-  background-color: #148afc;
-/*  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-*/  min-width: 350px;
-  height: 1000px;
+  background: rgb(142,186,64);
+  background: linear-gradient(90deg, rgba(142,186,64,1) 0%, rgba(142,186,64,1) 50%, rgba(255,255,255,1) 100%);
+  min-width: 350px;
+  min-height: 1400px;
+  justify-content: start;
+
+}
+
+.clearFiltersButton {
+  font-family: "Circular-Book";
+  background-color: #ffffff;
+  border-radius: 12px 12px;
+  color: #4d4d4d;
+  margin-top: 10px;
+  left: 0;
+  font-size: 10px;
+  box-shadow: none;
+
+}
+
+.clearFiltersButton:hover {
+  background: #ededed;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+
+.clearX {
+  width: 6px;
+  height: 6px;
+  margin-right: 3px;
+  margin-top: -2px;
 }
 
 .rightDiv {
@@ -25,12 +52,6 @@
   height: 1000px;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
 .logo {
   height: 130px;
@@ -39,7 +60,7 @@
 }
 
 .logoText {
-  color: #148afc;
+  color: #8eba40;
   font-family: "Circular-Black";
   font-size: 150px;
 }
@@ -47,7 +68,6 @@
 .previewImage {
   height: 210px;
   width: 300px;
-  align-self: center;
 }
 
 .items {
@@ -64,14 +84,11 @@
   min-height: 60vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  align-items: center;
   color: white;
   width: 300px;
-/*  padding: 10px 10px 20px 10px;
-*/  box-shadow: 5px 5px 5px #aaaaaa;
+  box-shadow: 5px 5px 5px #aaaaaa;
   border-radius: 1px 1px;
+  align-items: center;
 }
 
 .divAddress {
@@ -113,7 +130,7 @@
 .filterType {
   font-family: "Circular-Book";
   font-size: 13px;
-  background-color: #148afc;
+  background-color: #8eba40;
   border-radius: 12px 12px;
   padding-left: 9px;
   padding-right: 9px;
@@ -266,14 +283,12 @@
 
 
 
-body {
-  background-color: #000000;
-}
-
 .input-wrapper {
   position: relative;
   width: 500px;
   margin: 50px auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .input-highlight {
@@ -293,8 +308,6 @@ body {
 
 input {
   height: 60px;
-  width: 100%;
-  min-width: 100%;
   padding: 0;
   border-radius: 0;
   line-height: 70px;
@@ -311,4 +324,10 @@ input {
       border-top: 3px solid #fbc91b;
     }
   }
+}
+
+.searchIcon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }

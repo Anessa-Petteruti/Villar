@@ -85,6 +85,9 @@ class FilteredList extends Component {
 
       <div className="leftDiv">
 
+      <button className="clearFiltersButton" id="amount" onClick={this.changeFilterAmount} value="All">
+      <img className="clearX" src={require('./images/close.png')} alt="Close button"/>Clear filters</button>
+
       <div className="allFilterOptions">
 
         <div className="filterAndSortByText">Filter by</div>
@@ -165,15 +168,15 @@ class FilteredList extends Component {
 
           
 
-          <button id="amount" onClick={this.changeFilterAmount} value="All">Reset</button>
+          
 
           <div className="logoText">villar</div>
 
           <div className='input-wrapper'>
-          <input id="searchbar" onChange={this.searching} value={this.state.search} />
-          <span className='input-highlight'>
-        </span>
-      </div>
+            <img className="searchIcon" src={require('./images/searchIcon.png')} alt="Search icon"/>
+            <input id="searchbar" onChange={this.searching} value={this.state.search} />
+            <span className='input-highlight'></span>
+          </div>
 
           
 
