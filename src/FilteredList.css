@@ -31,13 +31,13 @@
   left: 0;
   font-size: 10px;
   box-shadow: none;
+  margin-bottom: 10px;
 
 }
 
 .clearFiltersButton:hover {
   background: #ededed;
   box-shadow: none;
-  margin-bottom: 10px;
 }
 
 .clearX {
