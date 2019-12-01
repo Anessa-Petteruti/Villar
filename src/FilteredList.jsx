@@ -18,7 +18,6 @@ class FilteredList extends Component {
       favorites: {
         '': ''
       },
-      counter: 1
     };
 
     this.baseState = this.state
@@ -68,9 +67,8 @@ class FilteredList extends Component {
 
   addFavorite = (item) => {
     if (item.isFavorited == true){
-      this.state.favorites['favorite-' + this.state.counter] = item.address1;
+      this.state.favorites['favorite-' + item.id] = item.address1;
       this.setState({favorites: this.state.favorites})
-      this.state.counter += 1;
     } 
   }
 
@@ -189,13 +187,13 @@ class FilteredList extends Component {
 
           </div>
           <div>
-            <li>
+            <ul>
               {
                 Object.keys(this.state.favorites).map(function(key) {
                   return <li className="list-group-item list-group-item-info">{this.state.favorites[key]}</li>
                 }.bind(this))
               }
-              </li>
+              </ul>
             
            </div>
 
