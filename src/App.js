@@ -5,7 +5,6 @@ import Counter from "./Counter";
 import FilteredList from "./FilteredList";
 import List from "./List";
 
-
 var estates = [
 
   {
@@ -22,7 +21,6 @@ var estates = [
     style: "french",
     dateListed: "July 14, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -39,7 +37,6 @@ var estates = [
     style: "colonial",
     dateListed: "May 6, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -56,7 +53,6 @@ var estates = [
     style: "french",
     dateListed: "April 1, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -73,7 +69,6 @@ var estates = [
     style: "colonial",
     dateListed: "January 6, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -90,7 +85,6 @@ var estates = [
     style: "colonial",
     dateListed: "January 1, 2019",
     amount: "All", 
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -107,7 +101,6 @@ var estates = [
     style: "modern",
     dateListed: "July 7, 2019",
     amount: "All", 
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -124,7 +117,6 @@ var estates = [
     style: "colonial",
     dateListed: "February 8, 2019",
     amount: "All", 
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -141,7 +133,6 @@ var estates = [
     style: "french",
     dateListed: "July 8, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -158,7 +149,6 @@ var estates = [
     style: "french",
     dateListed: "June 21, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -175,7 +165,6 @@ var estates = [
     style: "modern",
     dateListed: "May 16, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
 
   },
@@ -193,7 +182,6 @@ var estates = [
     style: "colonial",
     dateListed: "January 2, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -210,7 +198,6 @@ var estates = [
     style: "colonial",
     dateListed: "January 9, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -227,7 +214,6 @@ var estates = [
     style: "colonial",
     dateListed: "March 2, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -244,7 +230,6 @@ var estates = [
     style: "colonial",
     dateListed: "April 5, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
   {
@@ -261,7 +246,6 @@ var estates = [
     style: "colonial",
     dateListed: "April 9, 2019",
     amount: "All",
-    fav: require('./images/heart.png'),
     isFavorited: false
   },
 ];

@@ -53,11 +53,9 @@ class FilteredList extends Component {
    changeIsFavorited = (item) => {
     if (item.isFavorited === false){
       item.isFavorited = true;
-      item.fav = require('./images/like.png');
       document.getElementById(item.id).src = require('./images/like.png')
     } else {
       item.isFavorited = false;
-      item.fav = require('./images/heart.png');
       document.getElementById(item.id).src = require('./images/heart.png')
 
     }
@@ -66,9 +64,10 @@ class FilteredList extends Component {
   }
 
   addFavorite = (item) => {
-    if (item.isFavorited == true){
-      this.state.favorites['favorite-' + item.id] = item.address1;
+    if (item.isFavorited === true){
+      this.state.favorites[item.id] = item.address1;
       this.setState({favorites: this.state.favorites})
+
     } 
   }
 
@@ -187,10 +186,10 @@ class FilteredList extends Component {
 
           </div>
           <div>
-            <ul>
+            <ul >
               {
                 Object.keys(this.state.favorites).map(function(key) {
-                  return <li className="list-group-item list-group-item-info">{this.state.favorites[key]}</li>
+                  return <li key={key}>{this.state.favorites[key]}</li>
                 }.bind(this))
               }
               </ul>
@@ -232,7 +231,7 @@ class FilteredList extends Component {
               <div className="divDesc">
                 <img className="divIcon" src={require('./images/descriptionDivIcon.png')} alt="Desc Div Icon"/>
                 <div className="description">{item.description}</div>
-                <img className="favorite" id={item.id} src={item.fav} onClick = {() => this.changeIsFavorited(item)}/>
+                <img className="favorite" id={item.id} src={require('./images/heart.png')} onClick = {() => this.changeIsFavorited(item)}/>
               </div>
 
               <div className="tagsText">Tags</div>
