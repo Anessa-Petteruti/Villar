@@ -3,6 +3,7 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 import List from "./List";
 import "./FilteredList.css";
 
+
 class FilteredList extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,11 @@ class FilteredList extends Component {
       listing: "",
       propertyType: "",
       amount: "",
-      sorting: false
+      sorting: false, 
+      favorites: {
+        '': ''
+      },
+      counter: 1
     };
 
     this.baseState = this.state
@@ -46,6 +51,28 @@ class FilteredList extends Component {
     this.setState({sorting: true});
   }
 
+   changeIsFavorited = (item) => {
+    if (item.isFavorited === false){
+      item.isFavorited = true;
+      item.fav = require('./images/like.png');
+      document.getElementById(item.id).src = require('./images/like.png')
+    } else {
+      item.isFavorited = false;
+      item.fav = require('./images/heart.png');
+      document.getElementById(item.id).src = require('./images/heart.png')
+
+    }
+    this.addFavorite(item);
+    
+  }
+
+  addFavorite = (item) => {
+    if (item.isFavorited == true){
+      this.state.favorites['favorite-' + this.state.counter] = item.address1;
+      this.setState({favorites: this.state.favorites})
+      this.state.counter += 1;
+    } 
+  }
 
 
 
@@ -161,6 +188,16 @@ class FilteredList extends Component {
           </div>
 
           </div>
+          <div>
+            <li>
+              {
+                Object.keys(this.state.favorites).map(function(key) {
+                  return <li className="list-group-item list-group-item-info">{this.state.favorites[key]}</li>
+                }.bind(this))
+              }
+              </li>
+            
+           </div>
 
       </div>
 
@@ -197,6 +234,7 @@ class FilteredList extends Component {
               <div className="divDesc">
                 <img className="divIcon" src={require('./images/descriptionDivIcon.png')} alt="Desc Div Icon"/>
                 <div className="description">{item.description}</div>
+                <img className="favorite" id={item.id} src={item.fav} onClick = {() => this.changeIsFavorited(item)}/>
               </div>
 
               <div className="tagsText">Tags</div>

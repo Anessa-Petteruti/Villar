@@ -331,3 +331,18 @@ input {
   height: 50px;
   margin-right: 10px;
 }
+
+.favorite{
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+
+}
+
+.favorite:after {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  display: none;
+
+}

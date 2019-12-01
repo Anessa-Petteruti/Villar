@@ -5,7 +5,8 @@ import Counter from "./Counter";
 import FilteredList from "./FilteredList";
 import List from "./List";
 
-const estates = [
+
+var estates = [
 
   {
     id: 1,
@@ -20,7 +21,9 @@ const estates = [
     listing: "up for sale",
     style: "french",
     dateListed: "July 14, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 2,
@@ -35,7 +38,9 @@ const estates = [
     listing: "up for sale",
     style: "colonial",
     dateListed: "May 6, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 3,
@@ -50,7 +55,9 @@ const estates = [
     listing: "up for sale",
     style: "french",
     dateListed: "April 1, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 4,
@@ -65,7 +72,9 @@ const estates = [
     listing: "up for sale",
     style: "colonial",
     dateListed: "January 6, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 5,
@@ -80,7 +89,9 @@ const estates = [
     listing: "up for sale",
     style: "colonial",
     dateListed: "January 1, 2019",
-    amount: "All"
+    amount: "All", 
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 6,
@@ -95,7 +106,9 @@ const estates = [
     listing: "rent",
     style: "modern",
     dateListed: "July 7, 2019",
-    amount: "All"
+    amount: "All", 
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 7,
@@ -110,7 +123,9 @@ const estates = [
     listing: "rent",
     style: "colonial",
     dateListed: "February 8, 2019",
-    amount: "All"
+    amount: "All", 
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 8,
@@ -125,7 +140,9 @@ const estates = [
     listing: "up for sale",
     style: "french",
     dateListed: "July 8, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 9,
@@ -140,7 +157,9 @@ const estates = [
     listing: "up for sale",
     style: "french",
     dateListed: "June 21, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 10,
@@ -155,7 +174,10 @@ const estates = [
     listing: "rent",
     style: "modern",
     dateListed: "May 16, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
+
   },
   {
     id: 11,
@@ -170,7 +192,9 @@ const estates = [
     listing: "up for sale",
     style: "colonial",
     dateListed: "January 2, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 12,
@@ -185,7 +209,9 @@ const estates = [
     listing: "up for sale",
     style: "colonial",
     dateListed: "January 9, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 13,
@@ -200,7 +226,9 @@ const estates = [
     listing: "rent",
     style: "colonial",
     dateListed: "March 2, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 14,
@@ -215,7 +243,9 @@ const estates = [
     listing: "up for sale",
     style: "colonial",
     dateListed: "April 5, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
   {
     id: 15,
@@ -230,7 +260,9 @@ const estates = [
     listing: "rent",
     style: "colonial",
     dateListed: "April 9, 2019",
-    amount: "All"
+    amount: "All",
+    fav: require('./images/heart.png'),
+    isFavorited: false
   },
 ];
 
@@ -241,6 +273,7 @@ class App extends Component {
 
     
         <FilteredList items={estates} />
+        
 
         
       </div>
