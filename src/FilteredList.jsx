@@ -185,8 +185,8 @@ class FilteredList extends Component {
           </div>
 
           </div>
-          <div>
-            <ul >
+          <div className="favorites-div">Your Favorites
+            <ul className="favorites-list">
               {
                 Object.keys(this.state.favorites).map(function(key) {
                   return <li key={key}>{this.state.favorites[key]}</li>
