@@ -18,6 +18,7 @@ class FilteredList extends Component {
       favorites: {
         '': ''
       },
+      favOn: false,
     };
 
     this.baseState = this.state
@@ -40,6 +41,15 @@ class FilteredList extends Component {
 
   changeFilterAmount = (e) => {
     this.setState({amount: e.target.value});
+  }
+
+  displayFavorites = (e) => {
+    if (this.state.favOn){
+      this.setState({favOn: false});
+    } else {
+      this.setState({favOn: true});
+    }
+    
   }
 
   searching = (e) => {
@@ -76,6 +86,7 @@ class FilteredList extends Component {
 
 
 
+
   reset = () => {
     this.setState(this.baseState)
   }
@@ -102,6 +113,11 @@ class FilteredList extends Component {
     }
     if(this.state.sorting) {
       estates.sort((a, b) => (a.price - b.price))
+    }
+    if (this.state.favOn) {
+
+      estates = estates.filter(item => item.address1 === this.state.favorites[item.id]);
+      console.log(estates);
     }
     // if(this.state.amount) {
     //   estates = this.props.items;
@@ -188,7 +204,9 @@ class FilteredList extends Component {
           </div>
 
           </div>
+          
           <div className="favorites-div">Your Favorites
+          <button className="clearFiltersButton" id="favoriteButton" onClick={this.displayFavorites} value="favoriteOn"/>
             <ul className="favorites-list">
               {
                 Object.keys(this.state.favorites).map(function(key) {

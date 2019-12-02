@@ -21,7 +21,7 @@ var estates = [
     style: "french",
     dateListed: "July 14, 2019",
     amount: "All",
-    isFavorited: false
+    isFavorited: true
   },
   {
     id: 2,
