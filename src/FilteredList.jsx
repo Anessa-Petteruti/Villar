@@ -68,7 +68,10 @@ class FilteredList extends Component {
       this.state.favorites[item.id] = item.address1;
       this.setState({favorites: this.state.favorites})
 
-    } 
+    } else {
+      delete this.state.favorites[item.id];
+      this.setState({favorites: this.state.favorites})
+    }
   }
 
 
