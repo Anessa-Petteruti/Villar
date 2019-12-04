@@ -205,8 +205,15 @@ class FilteredList extends Component {
 
           </div>
           
-          <div className="favorites-div">Your Favorites
-          <button className="clearFiltersButton" id="favoriteButton" onClick={this.displayFavorites} value="favoriteOn"/>
+          <div className="favorites-div">
+          <div className="favoritesTitle">My Favorites</div>
+
+          <div class="boxes">
+          <input type="checkbox" id="box-1" defaultChecked={this.state.favOn}
+              onChange={this.displayFavorites}/>
+          <label for="box-1">Show Favorites</label>
+
+</div>
             <ul className="favorites-list">
               {
                 Object.keys(this.state.favorites).map(function(key) {
@@ -215,6 +222,8 @@ class FilteredList extends Component {
               }
               </ul>
             
+            
+
            </div>
 
       </div>

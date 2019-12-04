@@ -265,7 +265,7 @@ class App extends Component {
   componentDidMount() {
     this.interval = setInterval(() => this.setState({ loading: false }), 2000);
   }
-  
+
   componentWillUnmount() {
     clearInterval(this.interval);
   }
@@ -273,7 +273,7 @@ class App extends Component {
 
 
   render() {
-    if (this.state.loading) return <Spinner />;
+    if (this.state.loading) return <Spinner source={require('./images/loading-wedge.gif')} alt="House gif"/>;
     return (
       <div className="App">
 
