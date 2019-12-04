@@ -13,8 +13,24 @@
 .weatherDiv {
   height: 250px;
   min-width: 150px;
+  margin-right: 0px;
+  display: block; 
   background: rgb(142,186,64);
   background: linear-gradient(180deg, rgba(142,186,64,1) 0%, rgba(142,186,64,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.userDivs {
+  height: 250px;
+  min-width: 150px;
+  /*margin-top: 250px;*/
+  display: block; 
+  background: rgb(142,186,64);
+  background: linear-gradient(180deg, rgba(142,186,64,1) 0%, rgba(142,186,64,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.right {
+  height: 500px;
+   min-width: 150px;
 }
 
 
