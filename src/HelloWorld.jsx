@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
 class HelloWorld extends Component {
+  
+
   render() {
     return (
-      <h1>
-        Hello World!
-      </h1>
-    );
+    <div className="loader center">
+      <i className="fa fa-cog fa-spin" />
+    </div>
+  );
   }
 }
 

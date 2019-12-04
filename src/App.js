@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import HelloWorld from "./HelloWorld";
+import Spinner from "./Spinner";
 import Counter from "./Counter";
 import FilteredList from "./FilteredList";
 import List from "./List";
@@ -251,11 +251,34 @@ var estates = [
 ];
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true
+    };
+
+
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.setState({ loading: false }), 2000);
+  }
+  
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+
+
   render() {
+    if (this.state.loading) return <Spinner />;
     return (
       <div className="App">
 
     
+
         <FilteredList items={estates} />
         
 

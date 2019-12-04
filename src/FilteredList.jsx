@@ -128,7 +128,7 @@ class FilteredList extends Component {
 
       <div className="leftDiv">
 
-      <button className="clearFiltersButton" id="amount" onClick={this.changeFilterAmount} value="All">
+      <button className="clearFiltersButton" id="amount" onClick={this.reset} value="All">
       <img className="clearX" src={require('./images/close.png')} alt="Close button"/>Clear filters</button>
 
       <div className="allFilterOptions">
