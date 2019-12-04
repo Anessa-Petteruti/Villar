@@ -17,7 +17,7 @@
   background: rgb(142,186,64);
   background: linear-gradient(90deg, rgba(142,186,64,1) 0%, rgba(142,186,64,1) 50%, rgba(255,255,255,1) 100%);
   min-width: 350px;
-  height: 4300px;
+  height: 4700px;
   justify-content: start;
 
 }
@@ -59,10 +59,40 @@
   margin-right: 20px;
 }
 
+.logoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .logoText {
   color: #8eba40;
   font-family: "Circular-Black";
   font-size: 150px;
+}
+
+.houseIcon {
+  width: 100px;
+  height: 100px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.sloganWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sloganText {
+  color: #4d4d4d;
+  font-family: "Circular-Book";
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-style: italic;
+  width: 500px;
+
 }
 
 .previewImage {
@@ -81,7 +111,7 @@
 .itemDiv {
   background-color: #ededed;
   margin: 10px;
-  min-height: 60vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   color: white;

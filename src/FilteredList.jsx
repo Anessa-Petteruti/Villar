@@ -231,10 +231,12 @@ class FilteredList extends Component {
         <div className="rightDiv">
 
           
-
-          
-
-          <div className="logoText">villar</div>
+          <div className="logoWrapper">
+          <img className="houseIcon" src={require('./images/houseIcon.png')} alt="House icon"/>
+            <div className="logoText">villar</div>
+            
+          </div>
+        
 
           <div className='input-wrapper'>
             <img className="searchIcon" src={require('./images/searchIcon.png')} alt="Search icon"/>
@@ -242,6 +244,9 @@ class FilteredList extends Component {
             <span className='input-highlight'></span>
           </div>
 
+          <div className="sloganWrapper">
+            <div className="sloganText">Browse for your dream home by filtering by location, property type, and listing in the side bar...</div>
+          </div>
           
 
           <div className="items">

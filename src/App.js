@@ -287,7 +287,7 @@ class App extends Component {
 
   onPass(Lat,Long) {
     var that = this;
-OpenWeatherAPI.getTemp(Lat,Long).then(function (data) {
+    OpenWeatherAPI.getTemp(Lat,Long).then(function (data) {
       that.setState({
         Lat: Lat,
         Long: Long,
