@@ -1,0 +1,28 @@
+@font-face{
+  font-family: "Circular-Book";
+  src: url("./CircularStd-Book.otf");
+}
+
+@font-face{
+  font-family: "Circular-Black";
+  src: url("./CircularStd-Black.ttf");
+}
+
+.cityDiv {
+	font-family: "Circular-Book";
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #4d4d4d;
+}
+
+.tempDiv {
+	font-family: "Circular-Book";
+	font-size: 40px;
+	color: #4d4d4d;
+}
+
+.weatherIcon {
+	width: 60px;
+	height: auto;
+}

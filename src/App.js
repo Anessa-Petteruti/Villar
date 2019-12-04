@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import Spinner from "./Spinner";
-import Counter from "./Counter";
 import FilteredList from "./FilteredList";
 import List from "./List";
+import Location from './Location';
+import Temperature from './Temperature'
+import OpenWeatherAPI from './OpenWeatherAPI'
 
 var estates = [
 
@@ -96,7 +98,7 @@ var estates = [
     address2: "Providence, RI, 02906",
     description: "Colonial home in the style of a barn.",
     location: "urban",
-    propertyType: "apartment",
+    propertyType: "studio",
     listing: "rent",
     style: "modern",
     dateListed: "July 7, 2019",
@@ -248,6 +250,22 @@ var estates = [
     amount: "All",
     isFavorited: false
   },
+  {
+    id: 16,
+    photo: require('./images/55PartridgeRun.jpg'),
+    price: 380000,
+    priceDisplay: "$380,000",
+    address1: "55 Partridge Run",
+    address2: "East Greenwich, RI, 02818",
+    description: "Quaint family home in the heart of East Greenwich",
+    location: "suburban",
+    propertyType: "house",
+    listing: "up for sale",
+    style: "colonial",
+    dateListed: "February 7, 2019",
+    amount: "All",
+    isFavorited: false
+  },
 ];
 
 class App extends Component {
@@ -256,10 +274,30 @@ class App extends Component {
     super(props);
 
     this.state = {
-      loading: true
+      loading: true,
+      Lat:'',
+      Long:'',
+      Temp:'Loading'
     };
 
+    this.onPass = this.onPass.bind(this)
 
+
+  }
+
+  onPass(Lat,Long) {
+    var that = this;
+OpenWeatherAPI.getTemp(Lat,Long).then(function (data) {
+      that.setState({
+        Lat: Lat,
+        Long: Long,
+        Temp: data.main.temp,
+        Name: data.name
+      });
+    },
+    function (errorMessage) {
+        alert(errorMessage);
+    });
   }
 
   componentDidMount() {
@@ -277,10 +315,12 @@ class App extends Component {
     return (
       <div className="App">
 
-    
-
-        <FilteredList items={estates} />
         
+          <FilteredList items={estates} />
+          <div className="weatherDiv">
+            <Location onPass = {this.onPass} />
+            <Temperature Temp = {this.state.Temp} Name = {this.state.Name} Lat = {this.state.Lat} Long = {this.state.Long}/>
+          </div>
 
         
       </div>

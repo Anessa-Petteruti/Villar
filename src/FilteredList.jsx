@@ -208,10 +208,10 @@ class FilteredList extends Component {
           <div className="favorites-div">
           <div className="favoritesTitle">My Favorites</div>
 
-          <div class="boxes">
+          <div className="boxes">
           <input type="checkbox" id="box-1" defaultChecked={this.state.favOn}
               onChange={this.displayFavorites}/>
-          <label for="box-1">Show Favorites</label>
+          <label htmlFor="box-1">Show Favorites</label>
 
 </div>
             <ul className="favorites-list">
