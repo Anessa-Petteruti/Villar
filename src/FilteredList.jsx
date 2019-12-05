@@ -244,7 +244,7 @@ class FilteredList extends Component {
           </div>
 
           <div className="sloganWrapper">
-            <div className="sloganText">Browse for your dream home by filtering by location, property type, and listing in the side bar...</div>
+            <div className="sloganText">Browse for your dream home by filtering by location, property type, and listing in the side bar, tap the heart to favorite a villa...</div>
           </div>
 
 
