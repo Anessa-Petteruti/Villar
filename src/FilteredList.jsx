@@ -213,7 +213,7 @@ class FilteredList extends Component {
               onChange={this.displayFavorites}/>
           <label htmlFor="box-1">Show Favorites</label>
 
-</div>
+          </div>
             <ul className="favorites-list">
               {
                 Object.keys(this.state.favorites).map(function(key) {
@@ -237,7 +237,6 @@ class FilteredList extends Component {
             
           </div>
         
-
           <div className='input-wrapper'>
             <img className="searchIcon" src={require('./images/searchIcon.png')} alt="Search icon"/>
             <input id="searchbar" onChange={this.searching} value={this.state.search} />
@@ -247,7 +246,7 @@ class FilteredList extends Component {
           <div className="sloganWrapper">
             <div className="sloganText">Browse for your dream home by filtering by location, property type, and listing in the side bar...</div>
           </div>
-          
+
 
           <div className="items">
 

@@ -19,8 +19,9 @@ render(){
           </div>
           <img className="weatherIcon" src={require('./images/cloudy.png')} alt="Weather icon"/>
           <div className="tempDiv">
-            {Temp} &#8451;
+            {Temp}
           </div>
+          <div className="degSymbol">&#8451;</div>
         </div>
       )
     }

@@ -9,20 +9,25 @@
 }
 
 .cityDiv {
-	font-family: "Circular-Book";
+	font-family: "Circular-Black";
 	font-size: 20px;
-	margin-top: 20px;
 	margin-bottom: 10px;
 	color: #4d4d4d;
 }
 
 .tempDiv {
 	font-family: "Circular-Book";
-	font-size: 40px;
+	font-size: 50px;
 	color: #4d4d4d;
 }
 
 .weatherIcon {
 	width: 60px;
 	height: auto;
+}
+
+.degSymbol {
+	margin-top: -10px;
+	font-size: 25px;
+	color: #4d4d4d;
 }

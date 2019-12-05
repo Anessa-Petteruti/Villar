@@ -273,11 +273,19 @@ var users = [
 
   {
     id: 1,
-    name: "Anessa",
+    name: "Anessa Petteruti",
   },
   {
     id: 2,
-    name: "Katie",
+    name: "Katie Kwan",
+  },
+  {
+    id: 3,
+    name: "Emily Parker",
+  },
+  {
+    id: 4,
+    name: "Edward Delano",
   },
   ];
 

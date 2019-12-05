@@ -25,18 +25,17 @@ render(){
       console.log(users);
       return(
 
-        <div id="userDiv"> Users on Villar
+        <div id="userDiv"> <div id="villarUserTitle">Villar Users</div>
+        <img className="userIcon" src={require('./images/user.png')} alt="User icon"/>
           <div id="list">
           {users.map(user => 
 
               <div id="userDisplay">{user.name}</div>
             )}
           </div>
-          <div className="showUsers" onClick={this.displayUsers}>
-          <button>onClick={this.displayUsers}</button>
+
           
-          <label >Show users</label>
-          </div>
+          
         </div>
       )
     
