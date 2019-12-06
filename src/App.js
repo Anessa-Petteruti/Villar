@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Spinner from "./Spinner";
 import FilteredList from "./FilteredList";
-import List from "./List";
 import Location from './Location';
 import Temperature from './Temperature';
 import OpenWeatherAPI from './OpenWeatherAPI';
@@ -296,22 +295,22 @@ class App extends Component {
 
     this.state = {
       loading: true,
-      Lat:'',
-      Long:'',
+      latX:'',
+      longY:'',
       Temp:'Loading'
     };
 
-    this.onPass = this.onPass.bind(this)
+    this.getTempData = this.getTempData.bind(this)
 
 
   }
 
-  onPass(Lat,Long) {
+  getTempData(latX,longY) {
     var that = this;
-    OpenWeatherAPI.getTemp(Lat,Long).then(function (data) {
+    OpenWeatherAPI.getTemp(latX,longY).then(function (data) {
       that.setState({
-        Lat: Lat,
-        Long: Long,
+        latX: latX,
+        longY: longY,
         Temp: data.main.temp,
         Name: data.name
       });
@@ -340,8 +339,8 @@ class App extends Component {
           <FilteredList items={estates} />
           <div className="right">
           <div className="weatherDiv">
-            <Location onPass = {this.onPass} />
-            <Temperature Temp = {this.state.Temp} Name = {this.state.Name} Lat = {this.state.Lat} Long = {this.state.Long}/>
+            <Location getTempData = {this.getTempData} />
+            <Temperature Temp = {this.state.Temp} Name = {this.state.Name} latX = {this.state.latX} longY = {this.state.longY}/>
           </div>
           <div className="userDivs">
             <User users={users}/>

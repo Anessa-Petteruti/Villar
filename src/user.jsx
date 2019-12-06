@@ -22,7 +22,6 @@ displayUsers = (e) => {
   
 render(){
       var users = this.props.users;
-      console.log(users);
       return(
 
         <div id="userDiv"> <div id="villarUserTitle">Villar Users</div>
@@ -30,7 +29,7 @@ render(){
           <div id="list">
           {users.map(user => 
 
-              <div id="userDisplay">{user.name}</div>
+              <div key={user.id} id="userDisplay">{user.name}</div>
             )}
           </div>
 

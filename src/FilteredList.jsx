@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { DropdownButton, Dropdown } from "react-bootstrap";
-import List from "./List";
 import "./FilteredList.css";
 
 
@@ -119,9 +117,6 @@ class FilteredList extends Component {
       estates = estates.filter(item => item.address1 === this.state.favorites[item.id]);
       console.log(estates);
     }
-    // if(this.state.amount) {
-    //   estates = this.props.items;
-    // }
 
     return(
       <div className="wholeSite">

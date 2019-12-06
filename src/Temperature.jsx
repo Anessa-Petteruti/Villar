@@ -3,15 +3,13 @@ import "./Temperature.css";
 
 class Temperature extends Component{
 render(){
-    var {Temp, Lat, Name, Long} = this.props;
-    if(Temp==='Loading'){
-      return <div className='loading'>Loading Your Local Weather...</div>
+    var {Temp, Name} = this.props;
+    if(Temp === "Loading"){
+      return <div className="loading">Loading Your Local Weather...</div>
     }
     else {
-      console.log(Temp);
-      var Lat = Math.round(Lat)
-      var Long = Math.round(Long)
-      var Temp = Math.round(Temp)
+      Temp = (Temp - 273.15) * (9/5) + 32
+      Temp = Math.round(Temp)
       return(
         <div className='displayWeather'>
           <div className="cityDiv">
@@ -21,7 +19,7 @@ render(){
           <div className="tempDiv">
             {Temp}
           </div>
-          <div className="degSymbol">&#8451;</div>
+          <div className="degSymbol">&#176;F</div>
         </div>
       )
     }
