@@ -6,10 +6,12 @@ To run Villar:
 1. Make sure node is installed
 2. cd into my-test
 3. Run npm install to install node modules
-4. We added Axios, OpenWeather, and React Native node modules so these might have to be installed manually in addition to running npm install by running:
+4. We added Axios, OpenWeather, Bootstrap, and React Native node modules so these might have to be installed manually in addition to running npm install by running:
 	npm install openweather-apis
 	npm install axios
 	npm install react-native
+	npm install react-bootstrap
+(All dependencies that we installed are listed in the package.json)
 5. Once all node modules are installed, run npm start from the my-test directory
 6. Watch Villar appear on your screen! (The weather widget on the right side bar will take a couple seconds to load local weather data - you will have to allow Villar to use your current location if you would like to see the weather appear in the right side bar.)
 
